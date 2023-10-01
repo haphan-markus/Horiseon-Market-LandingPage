@@ -8,6 +8,16 @@ body {
     background-color: #d9dcd6;
 }
 
+/*Styles for a and p are moved up because they indicate the style for the whole body. */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -41,16 +51,7 @@ body {
     margin-left: 25px;
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-p {
-    font-size: 16px;
-}
-
-.hero {
+.header-image {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
@@ -59,22 +60,15 @@ p {
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
+/*The style section for "content" and "content-article" are position closed to each other for a better flow view*/
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
+/* 1. 1. Groups indicating similar styling/ attributes are grouped together first.
+2. "search-engine-optimization", "online-reputation-management", "social-media-marketing" are grouped into 1 class "content-article"*/
 .content-article {
     margin-bottom: 20px;
     padding: 50px;
@@ -93,6 +87,17 @@ p {
     font-size: 36px;
 }
 
+/* .float-left and .float-right are moved below styling for .content-article to show the parent-child order in HTML*/
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -104,6 +109,8 @@ p {
     background-color: #2589bd;
 }
 
+/* 1. Groups indicating similar styling/ attributes are grouped together first.
+2. "benefit-lead", "benefit-brand", and "benefit-cost" are grouped into 1 class "benefit-article" since they don't have any distinguished attributes.*/
 .benefit-article {
     margin-bottom: 32px;
     color: #ffffff;
@@ -123,15 +130,10 @@ p {
 .footer {
     padding: 30px;
     clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS','Lucida Sans Unicode','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
 .footer h2 {
     font-size: 20px;
 }
-
-/*1. CSS is refactored by grouping classes with similar attributes.
-2. "benefit-lead", "benefit-brand", and "benefit-cost" can be group into 1 class "benefit-article" since they don't have any distinguished attributes.
-3. "search-engine-optimization", "online-reputation-management", "social-media-marketing" are grouped into 1 class "content-article"
-4. The style section for "content" and "content-article" are position closed to each other for a better flow view.*/
